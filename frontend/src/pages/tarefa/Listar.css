@@ -1,0 +1,179 @@
+.listar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  min-height: calc(100vh - 80px);
+}
+
+.listar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.listar-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 2rem;
+}
+
+.btn-criar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-criar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.listar-vazio {
+  text-align: center;
+  padding: 50px 20px;
+  color: #666;
+}
+
+.listar-vazio p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid #667eea;
+  transition: color 0.3s;
+}
+
+.btn-link:hover {
+  color: #764ba2;
+}
+
+.listar-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.listar-tabela thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.listar-tabela th {
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.listar-tabela td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.listar-tabela tbody tr:hover {
+  background: #f9f9f9;
+  transition: background 0.3s;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.status.não-iniciada {
+  background: #e0e0e0;
+  color: #555;
+}
+
+.status.em-andamento {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.concluída {
+  background: #d4edda;
+  color: #155724;
+}
+
+.btn-editar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: inline-block;
+}
+
+.btn-editar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .listar-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .listar-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn-criar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .listar-tabela {
+    font-size: 0.9rem;
+  }
+
+  .listar-tabela th,
+  .listar-tabela td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .listar-container {
+    padding: 20px 10px;
+  }
+
+  .listar-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .listar-tabela {
+    font-size: 0.8rem;
+  }
+
+  .listar-tabela th,
+  .listar-tabela td {
+    padding: 8px;
+  }
+
+  .btn-editar {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+}

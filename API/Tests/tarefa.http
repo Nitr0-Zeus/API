@@ -1,0 +1,26 @@
+### Listar todas as tarefas
+GET http://localhost:5273/api/tarefas/listar
+
+### Listar tarefas não concluídas (Não iniciada e Em andamento)
+GET http://localhost:5273/api/tarefa/naoconcluidas
+
+### Listar tarefas concluídas
+GET http://localhost:5273/api/tarefa/concluidas
+
+### Cadastrar uma nova tarefa
+POST http://localhost:5273/api/tarefas/cadastrar
+Content-Type: application/json
+
+{
+    "titulo": "Estudar Node.js"
+}
+
+### Alterar o status de uma tarefa (altera Não iniciada para Em andamento ou Em andamento para Concluída)
+PATCH http://localhost:5273/api/tarefas/alterar/6a8b3e4d-5e4e-4f7e-bdc9-9181e456ad0e
+
+### Alterar o status da segunda tarefa
+PATCH http://localhost:5273/api/tarefas/alterar/2f1b7dc1-3b9a-4e1a-a389-7f5d2f1c8f3e
+
+### Alterar o status da terceira tarefa
+PATCH http://localhost:5273/api/tarefas/alterar/e5d4a7b9-1f9e-4c4a-ae3b-5b7c1a9d2e3f
+
